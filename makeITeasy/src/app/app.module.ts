@@ -5,8 +5,9 @@ import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './module/header/header.component';
-import { HttpClientModule , HttpClientXsrfModule, Http_INTERCEPTORS } from '@angular/common/http';
-
+import { HttpClientModule , HttpClientXsrfModule } from '@angular/common/http';
+import { LoginModule } from './login/login.module';
+import { RegisterModule } from './register/register.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,10 @@ import { HttpClientModule , HttpClientXsrfModule, Http_INTERCEPTORS } from '@ang
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    LoginModule,
+    RegisterModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
