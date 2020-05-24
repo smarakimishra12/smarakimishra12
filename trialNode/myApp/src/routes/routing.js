@@ -10,3 +10,4 @@ routing.get('/reguser', (req, res,next) => {
      }); 
 
 module.exports = routing;
+ 
