@@ -7,10 +7,10 @@ driver.findUser = () => {
             })
         })
 };
-// driver.findUser().then(dt=>{
-//    dt.forEach(a=>{
-//        console.log(a);
+driver.findUser().then(dt=>{
+   dt.forEach(a=>{
+       console.log(a);
        
-//    })
-// })
+   })
+})
 module.exports = driver; 

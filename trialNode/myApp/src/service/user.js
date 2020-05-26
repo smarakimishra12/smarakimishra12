@@ -13,7 +13,7 @@ userservice.fetchReguser = () => {
         } 
     })
 }
-// userservice.fetchReguser().then(dt=>{
-//     console.log(dt)
-// })
+userservice.fetchReguser().then(dt=>{
+    console.log(dt)
+})
 module.exports = userservice;
