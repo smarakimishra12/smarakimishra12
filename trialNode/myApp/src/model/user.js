@@ -9,10 +9,10 @@ driver.findUser = () => {
 };
 driver.addUser = (data) => {
     return connection.getUserCollection().then(model => {
-        
-        return model.insertOne({_id:0,Users:1},{})
+        return model.create(data)
         .then((udata) => {
-            if (udata.nModified === 1 ) {
+            console.log(udata)
+            if (udata != undefined ) {
                 console.log('added');
                 return 'added'
             }
@@ -23,21 +23,27 @@ driver.addUser = (data) => {
     })
 
 }
-driver.findUser().then(dt=>{
-   dt.forEach(a=>{
-       console.log(a);
-       
-   })
- })
+driver.findUser = (data) => {
+    return connection.getUserCollection().then(model => {
+        return model.find(data)
+        .then((udata) => {
+                if(udata != [])
+                {
+                    return true;
+                }
+                return false;
+            });
+        });
+    }
 user = {
     'userId':'smaraki@abc.com' ,
     'password':'smaraki',
     'username':'smaraki'
 }
-driver.addUser(user).then(dt=>{
-    dt.forEach(a=>{
-        console.log('nnm');
+// driver.addUser(user).then(dt=>{
+//     dt.forEach(a=>{
+//         console.log('nnm');
         
-    })
- })
+//     })
+//  })
 module.exports = driver; 

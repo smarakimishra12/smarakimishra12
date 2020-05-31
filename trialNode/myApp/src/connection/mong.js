@@ -13,7 +13,7 @@ let reguserSchema = Schema({
 
 let collection = {};
 collection.getUserCollection = () => Mongoose.connect(url, 
-    { useNewUrlParser:true}).then((database) => database.model('registeredUser',reguserSchema)).catch((error)=>{
+    { useNewUrlParser:true, useUnifiedTopology: true}).then((database) => database.model('registeredUser',reguserSchema)).catch((error)=>{
         let err = new Error("Could not connect Database");
         err.status = 500;
         throw err;

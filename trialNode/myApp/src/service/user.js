@@ -27,6 +27,11 @@ userservice.addReguser = (data) => {
         }
     })
 }
+userservice.findUser = (data) => {
+    return userDb.findUser(data).then(data1 => {
+            return data1;
+            })
+    }
 // userservice.fetchReguser().then(dt=>{
 //     console.log(dt)
 // })
