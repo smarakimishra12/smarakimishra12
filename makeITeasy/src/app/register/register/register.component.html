@@ -1,1 +1,38 @@
-<p>register works!</p>
+<div class=" row">
+    <div class="col-4"></div>
+    <div class="col-4 mt-4">
+        <div class="card shadow-lg p-3 mb-5 rounded">
+            <div class="card-body">
+              <h3 class="card-title text-center">Register</h3>
+              <div class="row">
+                <div class="col-4">
+                    Username :
+                </div>
+                <div class="col-12 mt-2">
+                    <input type="text" class="form-control" name="username" [(ngModel)]="username">
+                </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-4">
+                        UserId :
+                    </div>
+                    <div class="col-12 mt-2">
+                        <input type="text" class="form-control" [(ngModel)]="userid">
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-4">
+                        Password :
+                    </div>
+                    <div class="col-12 mt-2">
+                        <input type="password" class="form-control" [(ngModel)]="password">
+                    </div>
+                </div>
+                <div class="row mt-2 ml-1">
+                    <button type="submit" class="btn btn-primary" (click)='submit()'>Submit</button>
+                </div>
+            </div>
+          </div>
+    </div>
+
+</div>

@@ -7,7 +7,8 @@ const url =  'mongodb+srv://shyam:dalda3327@makeiteasy-demo-cf6k4.mongodb.net/us
 
 let reguserSchema = Schema({
     userId:String,  
-    password:String
+    password:String,
+    username:String,
 },{ collection: "registeredUser"}) ;
 
 let collection = {};
