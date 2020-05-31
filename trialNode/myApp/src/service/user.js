@@ -13,7 +13,29 @@ userservice.fetchReguser = () => {
         } 
     })
 }
-userservice.fetchReguser().then(dt=>{
-    console.log(dt)
-})
+userservice.addReguser = (data) => {
+    console.log(data);
+    return userDb.addUser(data).then(data1 => {
+        console.log(data1)
+        if(data1 === 'added') {
+            return data1;
+        }
+        else {
+            let err = new Error("Could not register the user");
+            err.status = 400;
+            throw err;
+        }
+    })
+}
+// userservice.fetchReguser().then(dt=>{
+//     console.log(dt)
+// })
+//  user = {
+//     'userId':'smaraki@abc.com' ,
+//    'password':'smaraki',
+//     'username':'smaraki'
+//  }
+//  userservice.addReguser(user).then(dt=> {
+//      console.log(dt);
+//  }) 
 module.exports = userservice;

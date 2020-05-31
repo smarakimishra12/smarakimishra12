@@ -19,7 +19,8 @@ import { RegisterModule } from './register/register.module';
     AppRoutingModule,
     CommonModule,
     LoginModule,
-    RegisterModule
+    RegisterModule,
+    HttpClientModule
 
   ],
   providers: [],
